@@ -1,0 +1,14 @@
+{
+  "files": {
+    "main.css": "/rajab-portfolio/static/css/main.067f39b4.css",
+    "main.js": "/rajab-portfolio/static/js/main.f68f3cc2.js",
+    "static/media/logo.png": "/rajab-portfolio/static/media/logo.1f096cf559c8b3e1fa28.png",
+    "index.html": "/rajab-portfolio/index.html",
+    "main.067f39b4.css.map": "/rajab-portfolio/static/css/main.067f39b4.css.map",
+    "main.f68f3cc2.js.map": "/rajab-portfolio/static/js/main.f68f3cc2.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.067f39b4.css",
+    "static/js/main.f68f3cc2.js"
+  ]
+}
