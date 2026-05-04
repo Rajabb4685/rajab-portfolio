@@ -7,42 +7,28 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem 2.5rem;
-  background: rgba(250, 248, 245, 0.88);
+  padding: 0.9rem 2.5rem;
+  background: rgba(250, 248, 245, 0.92);
   backdrop-filter: blur(12px);
   -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border);
 }
 
-/* ── LOGO ── */
+/* â”€â”€ LOGO â”€â”€ */
 .navbar__logo {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   flex-shrink: 0;
+  z-index: 110;
 }
 
-.navbar__logo-text {
-  font-family: 'Cormorant Garamond', serif;
-  font-size: 1.5rem;
-  font-weight: 600;
-  font-style: italic;
-  color: var(--text-dark);
-  letter-spacing: 0.02em;
-}
-
-.navbar__logo-dot {
-  color: var(--matcha);
-}
-
-/* When using an image logo: */
 .navbar__logo-img {
   height: 40px;
   width: auto;
   display: block;
   object-fit: contain;
-  /* Knocks out the black background so only the rose linework shows */
   mix-blend-mode: multiply;
   transition: opacity 0.2s ease;
 }
@@ -51,13 +37,13 @@
   opacity: 0.6;
 }
 
-/* ── LINKS — all pushed to the right ── */
+/* â”€â”€ DESKTOP LINKS â”€â”€ */
 .navbar__links {
   display: flex;
   align-items: center;
   gap: 0.15rem;
   list-style: none;
-  margin-left: auto; /* pushes everything to the right */
+  margin-left: auto;
 }
 
 .navbar__link {
@@ -77,36 +63,135 @@
   text-decoration: none;
 }
 
-.navbar__link:hover {
-  color: var(--text-dark);
+.navbar__link:hover         { color: var(--text-dark); background: var(--matcha-pale); }
+.navbar__link--active       { color: var(--text-dark); background: var(--matcha-pale); }
+.navbar__link--github       { color: var(--matcha); border: 1px solid var(--matcha-light); margin-left: 0.35rem; }
+.navbar__link--github:hover { background: var(--matcha-pale); color: var(--text-dark); }
+
+/* â”€â”€ HAMBURGER BUTTON â”€â”€ */
+.navbar__hamburger {
+  display: none;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  width: 36px;
+  height: 36px;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px;
+  z-index: 110;
+  border-radius: 8px;
+  transition: background 0.2s ease;
+}
+
+.navbar__hamburger:hover {
   background: var(--matcha-pale);
 }
 
-.navbar__link--active {
-  color: var(--text-dark);
-  background: var(--matcha-pale);
+.navbar__hamburger span {
+  display: block;
+  width: 22px;
+  height: 1.5px;
+  background: var(--text-dark);
+  border-radius: 2px;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+  transform-origin: center;
 }
 
-.navbar__link--github {
+/* Animate to X when open */
+.navbar__hamburger--open span:nth-child(1) { transform: translateY(6.5px) rotate(45deg); }
+.navbar__hamburger--open span:nth-child(2) { opacity: 0; transform: scaleX(0); }
+.navbar__hamburger--open span:nth-child(3) { transform: translateY(-6.5px) rotate(-45deg); }
+
+/* â”€â”€ MOBILE OVERLAY MENU â”€â”€ */
+.mobile-menu {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 99;
+  background: rgba(250, 248, 245, 0.97);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  opacity: 0;
+  transform: translateY(-12px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+}
+
+.mobile-menu--open {
+  opacity: 1;
+  pointer-events: all;
+  transform: translateY(0);
+}
+
+.mobile-menu__links {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  width: 100%;
+  padding: 0 2rem;
+}
+
+.mobile-menu__link {
+  display: block;
+  width: 100%;
+  max-width: 280px;
+  padding: 1rem 1.5rem;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.6rem;
+  font-weight: 300;
+  letter-spacing: 0.04em;
+  color: var(--text-dark);
+  background: none;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  text-align: center;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.mobile-menu__link:hover,
+.mobile-menu__link--active {
+  background: var(--matcha-pale);
+  color: var(--matcha);
+}
+
+.mobile-menu__link--github {
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.85rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
   color: var(--matcha);
   border: 1px solid var(--matcha-light);
-  margin-left: 0.35rem;
+  margin-top: 0.75rem;
+  padding: 0.7rem 1.5rem;
+  max-width: 180px;
 }
 
-.navbar__link--github:hover {
+.mobile-menu__link--github:hover {
   background: var(--matcha-pale);
   color: var(--text-dark);
 }
 
-/* ── MOBILE ── */
-@media (max-width: 700px) {
+/* â”€â”€ RESPONSIVE â”€â”€ */
+@media (max-width: 768px) {
   .navbar {
     padding: 0.9rem 1.25rem;
   }
 
-  .navbar__link {
-    padding: 0.28rem 0.45rem;
-    font-size: 0.68rem;
-    letter-spacing: 0.05em;
-  }
+  /* Hide desktop links, show hamburger */
+  .navbar__links     { display: none; }
+  .navbar__hamburger { display: flex; }
 }
