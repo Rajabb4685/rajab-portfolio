@@ -1,0 +1,139 @@
+/* ── RESET & BASE ── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --matcha: #a8c5a0;
+  --matcha-light: #d4e8d0;
+  --matcha-pale: #eef5ec;
+  --pink: #e8a0b4;
+  --pink-light: #f2c8d5;
+  --pink-pale: #fdf0f4;
+  --cream: #faf8f5;
+  --warm-white: #fffcf9;
+  --text-dark: #3a3330;
+  --text-mid: #6b5f5a;
+  --text-soft: #9e918c;
+  --border: rgba(168, 197, 160, 0.25);
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'DM Sans', sans-serif;
+  background: var(--cream);
+  color: var(--text-dark);
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+button {
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  border: none;
+  background: none;
+}
+
+/* ── SHARED COMPONENTS ── */
+.section-tag {
+  font-size: 0.75rem;
+  font-weight: 400;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--matcha);
+  margin-bottom: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.section-tag::before {
+  content: '';
+  display: inline-block;
+  width: 20px;
+  height: 1px;
+  background: var(--matcha);
+}
+
+.page-title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  font-weight: 300;
+  line-height: 1.1;
+  color: var(--text-dark);
+  margin-bottom: 2.5rem;
+}
+
+.page-title em {
+  font-style: italic;
+  color: var(--pink);
+}
+
+.page-content {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+}
+
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1.75rem;
+  background: var(--text-dark);
+  color: var(--warm-white);
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.82rem;
+  font-weight: 400;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border-radius: 30px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: var(--matcha);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(168, 197, 160, 0.35);
+}
+
+/* ── ANIMATIONS ── */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-up {
+  animation: fadeUp 0.65s ease both;
+}
+
+.fade-up:nth-child(2) { animation-delay: 0.1s; }
+.fade-up:nth-child(3) { animation-delay: 0.2s; }
+.fade-up:nth-child(4) { animation-delay: 0.3s; }
+.fade-up:nth-child(5) { animation-delay: 0.4s; }
+
+/* ── RESPONSIVE ── */
+@media (max-width: 640px) {
+  .page-content {
+    padding-left: 1.25rem;
+    padding-right: 1.25rem;
+  }
+}

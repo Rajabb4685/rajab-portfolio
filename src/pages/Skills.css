@@ -1,0 +1,85 @@
+.skills__sections {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.skills__group {}
+
+.skills__group-label {
+  font-size: 0.72rem;
+  letter-spacing: 0.13em;
+  text-transform: uppercase;
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.skills__group-label--pink   { color: var(--pink); }
+.skills__group-label--matcha { color: var(--matcha); }
+.skills__group-label--purple { color: #9b7fe8; }
+
+.skills__grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.65rem;
+}
+
+/* Individual badge */
+.skill-badge {
+  display: flex;
+  align-items: center;
+  gap: 0.55rem;
+  padding: 0.45rem 0.85rem 0.45rem 0.55rem;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  cursor: default;
+  transition: all 0.22s ease;
+  user-select: none;
+}
+
+.skill-badge:hover,
+.skill-badge--active {
+  background: var(--matcha-pale);
+  border-color: var(--matcha-light);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(168,197,160,0.18);
+}
+
+.skill-badge__icon {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.skill-badge__icon img {
+  width: 22px;
+  height: 22px;
+  object-fit: contain;
+  display: block;
+}
+
+.skill-badge__fallback {
+  width: 22px;
+  height: 22px;
+  border-radius: 6px;
+  background: var(--matcha-pale);
+  color: var(--matcha);
+  font-size: 0.6rem;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--matcha-light);
+}
+
+.skill-badge__name {
+  font-size: 0.82rem;
+  color: var(--text-dark);
+  font-weight: 400;
+  white-space: nowrap;
+}

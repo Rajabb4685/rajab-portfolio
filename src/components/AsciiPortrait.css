@@ -1,0 +1,48 @@
+.ascii-portrait {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+}
+
+.ascii-portrait__canvas-wrap {
+  cursor: crosshair;
+  line-height: 0;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.ascii-portrait__canvas {
+  display: block;
+  width: 100%;
+  max-width: 520px;
+  height: auto;
+  image-rendering: crisp-edges;
+}
+
+.ascii-portrait__themes {
+  display: flex;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.ascii-theme-btn {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1.5px solid var(--btn-color);
+  background: transparent;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.2s ease;
+}
+
+.ascii-theme-btn--active {
+  background: var(--btn-color);
+  transform: scale(1.25);
+}
+
+.ascii-theme-btn:hover {
+  background: var(--btn-color);
+  opacity: 0.8;
+}

@@ -1,0 +1,112 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2.5rem;
+  background: rgba(250, 248, 245, 0.88);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--border);
+}
+
+/* ── LOGO ── */
+.navbar__logo {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.navbar__logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+}
+
+.navbar__logo-dot {
+  color: var(--matcha);
+}
+
+/* When using an image logo: */
+.navbar__logo-img {
+  height: 40px;
+  width: auto;
+  display: block;
+  object-fit: contain;
+  /* Knocks out the black background so only the rose linework shows */
+  mix-blend-mode: multiply;
+  transition: opacity 0.2s ease;
+}
+
+.navbar__logo:hover .navbar__logo-img {
+  opacity: 0.6;
+}
+
+/* ── LINKS — all pushed to the right ── */
+.navbar__links {
+  display: flex;
+  align-items: center;
+  gap: 0.15rem;
+  list-style: none;
+  margin-left: auto; /* pushes everything to the right */
+}
+
+.navbar__link {
+  display: inline-block;
+  padding: 0.35rem 0.75rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.78rem;
+  font-weight: 400;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  color: var(--text-mid);
+  background: none;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.22s ease;
+  text-decoration: none;
+}
+
+.navbar__link:hover {
+  color: var(--text-dark);
+  background: var(--matcha-pale);
+}
+
+.navbar__link--active {
+  color: var(--text-dark);
+  background: var(--matcha-pale);
+}
+
+.navbar__link--github {
+  color: var(--matcha);
+  border: 1px solid var(--matcha-light);
+  margin-left: 0.35rem;
+}
+
+.navbar__link--github:hover {
+  background: var(--matcha-pale);
+  color: var(--text-dark);
+}
+
+/* ── MOBILE ── */
+@media (max-width: 700px) {
+  .navbar {
+    padding: 0.9rem 1.25rem;
+  }
+
+  .navbar__link {
+    padding: 0.28rem 0.45rem;
+    font-size: 0.68rem;
+    letter-spacing: 0.05em;
+  }
+}

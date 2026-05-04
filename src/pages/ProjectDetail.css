@@ -1,0 +1,134 @@
+.project-detail {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 4rem 2.5rem;
+}
+
+.project-detail__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: var(--text-soft);
+  cursor: pointer;
+  border: none;
+  background: none;
+  padding: 0;
+  margin-bottom: 2.5rem;
+  transition: color 0.2s ease;
+  font-family: 'DM Sans', sans-serif;
+}
+
+.project-detail__back:hover {
+  color: var(--matcha);
+}
+
+.project-detail__emoji {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  display: block;
+}
+
+.project-detail__title {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 300;
+  color: var(--text-dark);
+  margin-bottom: 0.5rem;
+}
+
+.project-detail__sub {
+  font-size: 0.88rem;
+  color: var(--text-soft);
+  margin-bottom: 2.25rem;
+  letter-spacing: 0.04em;
+}
+
+.project-detail__body p {
+  font-size: 0.95rem;
+  line-height: 1.85;
+  color: var(--text-mid);
+  margin-bottom: 1.25rem;
+}
+
+.project-detail__links {
+  display: flex;
+  gap: 0.75rem;
+  margin-top: 2.25rem;
+  flex-wrap: wrap;
+}
+
+.link-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.62rem 1.3rem;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 0.8rem;
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  border-radius: 30px;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.25s ease;
+}
+
+.link-btn--dark {
+  background: var(--text-dark);
+  color: var(--warm-white);
+  border: none;
+}
+
+.link-btn--dark:hover {
+  background: var(--matcha);
+}
+
+.link-btn--outline {
+  background: transparent;
+  color: var(--text-dark);
+  border: 1px solid var(--border);
+}
+
+.link-btn--outline:hover {
+  border-color: var(--matcha-light);
+  background: var(--matcha-pale);
+}
+
+@media (max-width: 640px) {
+  .project-detail {
+    padding: 3rem 1.25rem;
+  }
+}
+
+/* Hero image on detail page */
+.project-detail__hero {
+  width: 100%;
+  height: 280px;
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 1.75rem;
+  border: 1px solid var(--border);
+}
+
+.project-detail__hero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.project-detail__hero--placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 4rem;
+}
+
+/* Tech stack row */
+.project-detail__stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}

@@ -1,0 +1,83 @@
+.tech-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  background: var(--warm-white);
+  border: 1px solid var(--border);
+  border-radius: 30px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.tech-badge:hover {
+  background: var(--matcha-pale);
+  border-color: var(--matcha-light);
+  transform: translateY(-1px);
+}
+
+/* Small — used on project cards */
+.tech-badge--sm {
+  padding: 0.22rem 0.6rem 0.22rem 0.4rem;
+}
+
+.tech-badge--sm .tech-badge__icon {
+  width: 16px;
+  height: 16px;
+}
+
+.tech-badge--sm .tech-badge__label {
+  font-size: 0.72rem;
+  color: var(--text-mid);
+}
+
+.tech-badge--sm .tech-badge__fallback {
+  font-size: 0.52rem;
+}
+
+/* Medium — used on project detail page */
+.tech-badge--md {
+  padding: 0.3rem 0.8rem 0.3rem 0.55rem;
+}
+
+.tech-badge--md .tech-badge__icon {
+  width: 20px;
+  height: 20px;
+}
+
+.tech-badge--md .tech-badge__label {
+  font-size: 0.82rem;
+  color: var(--text-dark);
+}
+
+.tech-badge--md .tech-badge__fallback {
+  font-size: 0.6rem;
+}
+
+/* Icon wrapper */
+.tech-badge__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.tech-badge__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.tech-badge__fallback {
+  width: 100%;
+  height: 100%;
+  border-radius: 5px;
+  background: var(--matcha-pale);
+  color: var(--matcha);
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  letter-spacing: 0.02em;
+  border: 1px solid var(--matcha-light);
+}
