@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "/rajab-portfolio/static/css/main.abbd5ee8.css",
-    "main.js": "/rajab-portfolio/static/js/main.0aefe4f1.js",
+    "main.css": "/rajab-portfolio/static/css/main.6ebada06.css",
+    "main.js": "/rajab-portfolio/static/js/main.fd616a29.js",
     "static/media/logo.png": "/rajab-portfolio/static/media/logo.1f096cf559c8b3e1fa28.png",
     "index.html": "/rajab-portfolio/index.html",
-    "main.abbd5ee8.css.map": "/rajab-portfolio/static/css/main.abbd5ee8.css.map",
-    "main.0aefe4f1.js.map": "/rajab-portfolio/static/js/main.0aefe4f1.js.map"
+    "main.6ebada06.css.map": "/rajab-portfolio/static/css/main.6ebada06.css.map",
+    "main.fd616a29.js.map": "/rajab-portfolio/static/js/main.fd616a29.js.map"
   },
   "entrypoints": [
-    "static/css/main.abbd5ee8.css",
-    "static/js/main.0aefe4f1.js"
+    "static/css/main.6ebada06.css",
+    "static/js/main.fd616a29.js"
   ]
 }
