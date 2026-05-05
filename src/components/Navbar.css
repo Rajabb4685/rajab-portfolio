@@ -15,22 +15,44 @@
 }
 
 /* â”€â”€ LOGO â”€â”€ */
-.navbar__logo {
+/* .navbar__logo {
   background: none;
   border: none;
   padding: 0;
   cursor: pointer;
   flex-shrink: 0;
   z-index: 110;
-}
+} */
 
-.navbar__logo-img {
+/* .navbar__logo-img {
   height: 40px;
   width: auto;
   display: block;
   object-fit: contain;
   mix-blend-mode: multiply;
   transition: opacity 0.2s ease;
+} */
+
+/* â”€â”€ LOGO â”€â”€ */
+.navbar__logo {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  flex-shrink: 0;
+}
+
+.navbar__logo-text {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  font-style: italic;
+  color: var(--text-dark);
+  letter-spacing: 0.02em;
+}
+
+.navbar__logo-dot {
+  color: var(--matcha);
 }
 
 .navbar__logo:hover .navbar__logo-img {

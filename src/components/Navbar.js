@@ -38,9 +38,15 @@ export default function Navbar({ currentPage, navigate }) {
     <>
       <nav className="navbar">
         {/* LOGO — left */}
-        <button className="navbar__logo" onClick={() => handleNav('home')}>
+        {/* <button className="navbar__logo" onClick={() => handleNav('home')}>
           <img src={logo} alt="Rajab logo" className="navbar__logo-img" />
-        </button>
+        </button> */}
+
+      <button className="navbar__logo" onClick={() => navigate('home')}>
+        {/* Once you add your logo image, replace the text below with:
+            <img src={logo} alt="Rajab logo" className="navbar__logo-img" /> */}
+        <span className="navbar__logo-text">Rajab Begim<span className="navbar__logo-dot"></span></span>
+      </button>
 
         {/* LINKS — right (desktop) */}
         <ul className="navbar__links">
