@@ -26,9 +26,14 @@ export default function Contact() {
   const handleChange = e =>
     setForm(prev => ({ ...prev, [e.target.name]: e.target.value }));
 
-  const handleSubmit = () => {
-    alert('Message sent! (connect this to Formspree or EmailJS 💌)');
-    setSent(true);
+  const handleSubmit = async () => {
+    const res = await fetch('https://formspree.io/f/mgoqjele', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify(form),
+    });
+    if (res.ok) setSent(true);
+    else alert('Something went wrong. Please try again.');
   };
 
   return (
