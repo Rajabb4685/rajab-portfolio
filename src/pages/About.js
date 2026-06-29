@@ -11,10 +11,10 @@ export default function About() {
         <div className="about__grid">
           <div className="about__text fade-up">
             <p>
-              Hey! I'm Rajab, a Computer Science student at CUNY Hunter College with a Minor in Mathematics, graduating May 2027. I'm passionate about building things that matter, whether that's full-stack web apps, AI-powered tools, or mobile features shipped to real users.
+              Hey! I'm Rajab, a Computer Science student at CUNY Hunter College with a Minor in Mathematics. I'm passionate about building things that matter, whether that's full-stack web apps, AI-powered tools, or mobile features shipped to real users.
             </p>
             <p>
-              I've interned at Wyndham Hotels and Allstate, built AI agents with LangChain and OpenAI, and I'm currently working as a Software Engineering Intern at Stretch Mode and leading a development team at Hunter College. I'm also an Incoming Developer Intern at the NYC Law Department for Summer 2026.
+              I've interned and done fellowship at Wyndham Hotels and Allstate, built AI agents with LangChain and OpenAI, also I interned as a Software Engineering Intern at Stretch Mode and leading a development team at Hunter College. I'm currently Developer Intern at the NYC Law Department for Summer 2026.
             </p>
             <p>
               I love the intersection of clean code and thoughtful design. When I'm not coding, you'll find me exploring new AI tools, contributing to team projects, or learning something new.
@@ -23,7 +23,7 @@ export default function About() {
 
           <div className="about__aside fade-up">
             {[
-              { label: 'Currently',  value: 'SWE Intern at Stretch Mode' },
+              { label: 'Currently',  value: 'Software Developer Intern at NYC Law Department' },
               { label: 'Education',  value: 'Computer Science at Hunter College' },
               // { label: 'Certificate', value: 'Cornell University, ML Foundations, Grade: 98%' },
               { label: 'Based in',   value: 'New York City, NY 🗽' },

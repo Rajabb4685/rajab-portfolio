@@ -4,18 +4,18 @@ import './Experience.css';
 const experiences = [
   {
     date: 'June 2026',
-    title: 'Incoming Developer Intern',
+    title: 'Software Developer Intern',
     org: 'New York City Law Department',
-    desc: `Incoming Summer 2026 Developer Intern at the New York City Law Department.`,
+    desc: `Designing a React frontend with an animated D3.js org-chart visualization, supporting zoom/pan navigation and live search-to-node highlighting for fast employee lookup across the department's 1,500+ employees. Architecting a PostgreSQL schema with a self-referencing supervisor relationship to model the department's reporting hierarchy, and building a Node.js, GraphQL API (Apollo Server) to support nested queries and filtering by team, supervisor, and seat location.`,
     current: true,
     logo: 'https://media.licdn.com/dms/image/v2/C560BAQFjWwnIAJmilg/company-logo_200_200/company-logo_200_200/0/1631310494335?e=1779321600&v=beta&t=_PL6TZa-4QrsWoc0wfxoMdSQvK7eE779FLkGIZoOYUI',
   },
   {
-    date: 'Jan 2026 – Present',
+    date: 'Jan 2026 – May 2026',
     title: 'Software Engineering Intern',
     org: 'Stretch Mode · Remote',
     desc: `Built and shipped end-to-end Android features in Kotlin, including barcode scanning, product detail screens, and a user submission flow across the full SDLC from ticket to production. Managed work on Jira within an Agile sprint cycle, collaborating cross-functionally and reviewing pull requests with close attention to edge cases and UI consistency.`,
-    current: true,
+    current: false,
     logo: 'https://media.licdn.com/dms/image/v2/D560BAQEIA_aTQLhpXQ/company-logo_100_100/company-logo_100_100/0/1702423831753/movement_vault_logo?e=1779321600&v=beta&t=HptBvk7eosqIX8E-wFCZ1_RFdZgmALxpeT5Jxl-KRqo',
   },
   {
@@ -23,7 +23,7 @@ const experiences = [
     title: 'Machine Learning & AI Fellow',
     org: 'Break Through Tech AI',
     desc: `Selected from 3000+ applicants for Break Through Tech AI Program at Cornell University. Built and trained deep learning models using TensorFlow and Keras, applying neural networks to image classification and computer vision tasks. Developed supervised and unsupervised models using Scikit-learn with cross-validation, GridSearchCV, and metrics including ROC AUC and precision-recall curves.`,
-    current: true,
+    current: false,
     logo: 'https://media.licdn.com/dms/image/v2/C4E0BAQFvUf8RSXIZnQ/company-logo_100_100/company-logo_100_100/0/1630635059610/break_through_tech_logo?e=1779321600&v=beta&t=ksk-fBp8K1pKz7ZSQ7FMnSMY79L9soccV9QpPJrTDTE',
   },
   {
@@ -31,7 +31,7 @@ const experiences = [
     title: 'Software Developer & Project Lead',
     org: 'Hunter College · New York City, NY',
     desc: `Leading the Project Development Program, managing a team of developers using Agile methodologies, conducting regular code reviews, and tracking tasks. Currently building an AI knowledge management agent using Python, LangChain, OpenAI GPT, and NLP. Developing the system with FastAPI, ChromaDB, and Docker, applying DevOps practices.`,
-    current: true,
+    current: false,
     logo: 'https://media.licdn.com/dms/image/v2/D4E0BAQFCVywN3AN0XQ/company-logo_100_100/company-logo_100_100/0/1722866745747/huntercsclub_logo?e=1779321600&v=beta&t=aB4n-ihQ37j3Q3oKVPFoOlC7L7rwQ8KL_O5oOk0iwRA',
   },
   {
